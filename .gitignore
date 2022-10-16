@@ -1,0 +1,9 @@
+*
+!.gitignore
+!bun.lockb
+!serverless.js
+!serverless.yml
+!jsconfig.json
+!LICENSE
+!package.json
+!README.md

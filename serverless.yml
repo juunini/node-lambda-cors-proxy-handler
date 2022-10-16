@@ -1,0 +1,19 @@
+service: node-lambda-cors-proxy-handler
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  region: ap-northeast-2
+  environment:
+    PREFIX: /cors/
+
+functions:
+  main:
+    handler: serverless.handler
+    events:
+      - http:
+          method: ANY
+          path: '/cors/{proxy+}'
